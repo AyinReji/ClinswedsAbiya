@@ -10,18 +10,43 @@ import moment3 from "@/assets/moment-3.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "John & Alice — 13 July 2026" },
-      { name: "description", content: "Together with their families, John & Alice invite you to celebrate their wedding on 13 July 2026 at The Botanical Pavilion, Garden Grove." },
-      { property: "og:title", content: "John & Alice — A Wedding Invitation" },
+      { title: "Clins & Abiya" },
+      { name: "description", content: "Together with their families, Clins & Abiya invite you to celebrate their wedding on 13 July 2026 at The Botanical Pavilion, Garden Grove." },
+      { property: "og:title", content: "Clins & Abiya — A Wedding Invitation" },
       { property: "og:description", content: "13 July 2026 · The Botanical Pavilion, Garden Grove." },
     ],
+
+    
     links: [
+      {
+    rel: "apple-touch-icon",
+    sizes: "180x180",
+    href: "/apple-touch-icon.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    href: "/favicon-32x32.png",
+  },
+  {
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+    href: "/favicon-16x16.png",
+  },
+  {
+    rel: "manifest",
+    href: "/site.webmanifest",
+  },
+
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Allura&family=Pinyon+Script&family=Inter:wght@300;400;500&display=swap",      },
-    ],
+    
+      ],
   }),
   component: Invitation,
 });
@@ -179,7 +204,16 @@ function Invitation() {
 
   return (
     <>
-      <AnimatePresence>{showIntro && <Intro key="intro" onDone={() => setShowIntro(false)} />}</AnimatePresence>
+      <AnimatePresence>{showIntro && <Intro key="intro" onDone={() => {
+  setShowIntro(false);
+
+  requestAnimationFrame(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  });
+}} />}</AnimatePresence>
 
       <main className="relative w-full min-h-screen flex justify-center bg-background">
         <motion.div
