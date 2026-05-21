@@ -6,11 +6,16 @@
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// Netlify deployment: disable Cloudflare Workers plugin so Vite outputs a
-// plain static SPA to dist/client that Netlify can serve directly.
+// Vercel/static deployment:
+// - cloudflare: false  → disables Cloudflare Workers output, produces a plain static build
+// - spa: {}            → enables TanStack Start's SPA mode, which pre-renders an HTML shell
+//                        to dist/client/_shell/index.html during build.
+//                        vercel.json rewrites all routes to that shell so client-side
+//                        routing takes over (no server required, no 404s).
 export default defineConfig({
   cloudflare: false,
   tanstackStart: {
     server: { entry: "server" },
+    spa: {},
   },
 });

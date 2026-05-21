@@ -1,0 +1,15 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist/client",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/_shell",
+      "destination": "/_shell/index.html"
+    },
+    {
+      "source": "/((?!_shell|assets|favicon|android-chrome|apple-touch|site\\.webmanifest|robots).*)",
+      "destination": "/_shell/index.html"
+    }
+  ]
+}
