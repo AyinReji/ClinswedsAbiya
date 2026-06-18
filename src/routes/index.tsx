@@ -468,7 +468,7 @@ function Details() {
 
         <div className="flex justify-center mt-6 -mb-12">
           <motion.a
-            href="https://maps.app.goo.gl/CJzyGyp3sdPFsg6v5" target="_blank" rel="noopener noreferrer"
+            href="https://maps.app.goo.gl/CJzyGyp3sdPFsg6v5"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.04 }}
