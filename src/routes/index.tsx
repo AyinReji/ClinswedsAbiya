@@ -724,7 +724,7 @@ function BlendedFooter() {
         <p className="text-[11px] text-muted-foreground mt-10">
           Designed by{" "}
           <a
-            href="https://avenirstudios.vercel.app"
+            href="https://www.kaeonstudios.com"
             className="story-link"
             style={{ color: "var(--ink)" }}
           >
