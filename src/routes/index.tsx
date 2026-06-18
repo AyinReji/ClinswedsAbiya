@@ -3,9 +3,9 @@ import { useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import floral from "@/assets/floral-corner.png";
 import leaf from "@/assets/leaf-sprig.png";
-import moment1 from "@/assets/moment-1.jpg";
-import moment2 from "@/assets/moment-2.jpg";
-import moment3 from "@/assets/moment-3.jpg";
+import moment1 from "@/assets/moment-1.jpeg";
+import moment2 from "@/assets/moment-2.jpeg";
+import moment3 from "@/assets/moment-3.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -577,8 +577,8 @@ function Moments() {
   ];
 
   return (
-    // remove the last hidden class to show this section IN THE LINE 547
-    <section className="relative px-6 py-20 text-center overflow-hidden hidden">
+    // remove the last hidden class to show this section IN THE LINE 581
+    <section className="relative px-6 py-20 text-center overflow-hidden">
       <Atmosphere density={6} />
       <p className="text-[10px] tracking-[0.35em] text-muted-foreground font-sans-tracked">OUR MOMENTS</p>
       <div className="flex items-center justify-center gap-1 mt-3" style={{ color: "var(--gold)" }}>
