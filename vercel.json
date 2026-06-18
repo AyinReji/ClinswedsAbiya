@@ -5,11 +5,11 @@
   "rewrites": [
     {
       "source": "/_shell",
-      "destination": "/_shell/index.html"
+      "destination": "/_shell.html"
     },
     {
       "source": "/((?!_shell|assets|favicon|android-chrome|apple-touch|site\\.webmanifest|robots).*)",
-      "destination": "/_shell/index.html"
+      "destination": "/_shell.html"
     }
   ]
 }
